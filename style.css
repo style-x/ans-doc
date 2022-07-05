@@ -20,7 +20,11 @@ h1 {
   text-align: center;
 }
 
-header p {
+nav {
+  background-color: #CCC;
+}
+
+nav p {
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
@@ -28,16 +32,16 @@ header p {
 
 /* section styles */
 
-section article {
+main article {
   width: 33%;
   float: left;
 }
 
-section p {
+main p {
   margin: 5px 0;
 }
 
-section ul {
+main ul {
   margin-top: 0;
 }
 

@@ -1,2 +1,2 @@
 # ans-doc
-Documentation Tool for Articel in Enterprise.
+Documentation Tool for Enterprise.

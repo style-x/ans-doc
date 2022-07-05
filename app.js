@@ -1,7 +1,9 @@
+// Anfang
+
 var nav = document.querySelector('nav');
 var main = document.querySelector('main');
 
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+// URL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 var myReqURL = 'https://github.com/style-x/ans-doc/db.json';
 
 var request = new XMLHttpRequest();
@@ -12,50 +14,28 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-  var superHeroes = request.response;
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
+  var myTable = request.response;
+  buildTable(myTable);
 }
 
-function populateHeader(jsonObj) {
-  var myH1 = document.createElement('h1');
-  myH1.textContent = jsonObj['squadName'];
-  nav.appendChild(myH1);
+function buildTable(jsonObj) {
+  
+  var table = document.getElementById('myTable');
 
-  var myPara = document.createElement('p');
-  myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-  nav.appendChild(myPara);
-}
+  let data = jsonObj.members;
+  
+  table.innerHTML = '';
 
-function showHeroes(jsonObj) {
-  var heroes = jsonObj['members'];
-
-  for (var i = 0; i < heroes.length; i++) {
-    var myArticle = document.createElement('article');
-    var myH2 = document.createElement('h2');
-    var myPara1 = document.createElement('p');
-    var myPara2 = document.createElement('p');
-    var myPara3 = document.createElement('p');
-    var myList = document.createElement('ul');
-
-    myH2.textContent = heroes[i].name;
-    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-    myPara2.textContent = 'Age: ' + heroes[i].age;
-    myPara3.textContent = 'Superpowers:';
-
-    var superPowers = heroes[i].powers;
-    for (var j = 0; j < superPowers.length; j++) {
-      var listItem = document.createElement('li');
-      listItem.textContent = superPowers[j];
-      myList.appendChild(listItem);
-    }
-
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    myArticle.appendChild(myPara3);
-    myArticle.appendChild(myList);
-
-    main.appendChild(myArticle);
+  for (i = 0; i < data.length; i++) {
+    while (i < 10) {
+      var row = `<tr>
+                    <td>${data[i].name}</td>
+                    <td>${data[i].artnr}</td>
+                    <td>${data[i].test}</td>
+                </tr>`
+      table.innerHTML += row;
+    };
   }
 }
+
+// Ende

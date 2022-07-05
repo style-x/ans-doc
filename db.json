@@ -1,40 +1,111 @@
 {
-    "squadName" : "Super Hero Squad",
-    "homeTown" : "Metro City",
-    "formed" : 2016,
-    "secretBase" : "Super tower",
+    "devName" : "SB",
+    "articlecount" : 3,
     "active" : true,
-    "members" : [
+    "article" : [
       {
-        "name" : "Molecule Man",
-        "age" : 29,
-        "secretIdentity" : "Dan Jukes",
-        "powers" : [
-          "Radiation resistance",
-          "Turning tiny",
-          "Radiation blast"
+        "name" : "SF433-5-R-ACS",
+        "artnr" : 921234,
+        "clients" : [
+          "Butzbach",
+          "HEW",
+          "RUKU"
         ]
       },
       {
-        "name" : "Madame Uppercut",
-        "age" : 39,
-        "secretIdentity" : "Jane Wilson",
-        "powers" : [
-          "Million tonne punch",
-          "Damage resistance",
-          "Superhuman reflexes"
+        "name" : "EF433-4E",
+        "artnr" : 974321,
+        "clients" : [
+          "Mimimi",
+          "Dortma",
+          "Superdupa"
         ]
       },
       {
-        "name" : "Eternal Flame",
-        "age" : 1000000,
-        "secretIdentity" : "Unknown",
-        "powers" : [
-          "Immortality",
-          "Heat Immunity",
+        "name" : "SF433-5-AES-Dialog",
+        "artnr" : 971435,
+        "clients" : [
+          "Iversen",
+          "HEW",
           "Inferno",
-          "Teleportation",
-          "Interdimensional travel"
+          "Telekomande",
+          "Superdupa"
+        ]
+      }
+      {
+        "name" : "EF433-1E",
+        "artnr" : 974321,
+        "clients" : [
+          "Mimimi",
+          "Dortma",
+          "Superdupa"
+        ]
+      },
+      {
+        "name" : "EF433-2E",
+        "artnr" : 974322,
+        "clients" : [
+          "Mimimi",
+          "Dortma",
+          "Superdupa"
+        ]
+      },
+      {
+        "name" : "EF433-3E",
+        "artnr" : 974323,
+        "clients" : [
+          "Mimimi",
+          "Dortma",
+          "Superdupa"
+        ]
+      },
+      {
+        "name" : "EF433-4E",
+        "artnr" : 974324,
+        "clients" : [
+          "Mimimi",
+          "Dortma",
+          "Superdupa"
+        ]
+      },
+      {
+        "name" : "EF433-5E",
+        "artnr" : 974325,
+        "clients" : [
+          "Mimimi",
+          "Dortma",
+          "Superdupa"
+        ]
+      },
+      {
+        "name" : "EF433-8E",
+        "artnr" : 974318,
+        "clients" : [
+          "allClients"
+        ]
+      },
+      {
+        "name" : "SF433-12E",
+        "artnr" : 934555,
+        "clients" : [
+          "Dortma",
+          "Superdupa"
+        ]
+      },
+      {
+        "name" : "EF433-24E",
+        "artnr" : 974411,
+        "clients" : [
+          "Hallo"
+        ]
+      },
+      {
+        "name" : "SF434-2",
+        "artnr" : 972201,
+        "clients" : [
+          "Butzbach",
+          "Superdupa",
+          "HEW"
         ]
       }
     ]

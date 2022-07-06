@@ -17,7 +17,7 @@ request.send();
 
 function buildTable(jsonObj) {
   var table = document.getElementById('myTable');
-  let data = jsonObj.members;
+  let data = jsonObj.article;
   table.innerHTML = '';
 
   for (i = 0; i < data.length; i++) {

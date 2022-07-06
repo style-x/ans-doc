@@ -3,8 +3,8 @@
 var nav = document.querySelector('nav');
 var main = document.querySelector('main');
 
-// URL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-var myReqURL = 'https://github.com/style-x/ans-doc/db.json';
+// https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json
+var requestURL = 'https://github.com/style-x/ans-doc/db.json';
 
 var request = new XMLHttpRequest();
 

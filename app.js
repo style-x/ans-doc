@@ -4,7 +4,7 @@ var nav = document.querySelector('nav');
 var main = document.querySelector('main');
 
 // https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json
-var requestURL = 'https://github.com/style-x/ans-doc/db.json';
+var requestURL = 'https://style-x.github.io/ans-doc/db.json';
 
 var request = new XMLHttpRequest();
 

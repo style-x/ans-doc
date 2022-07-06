@@ -15,17 +15,9 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
-request.onload = function() {
-  var myTable = request.response;
-  buildTable(myTable);
-}
-
 function buildTable(jsonObj) {
-  
   var table = document.getElementById('myTable');
-
   let data = jsonObj.members;
-  
   table.innerHTML = '';
 
   for (i = 0; i < data.length; i++) {
@@ -38,6 +30,11 @@ function buildTable(jsonObj) {
       table.innerHTML += row;
     };
   }
+}
+
+request.onload = function() {
+  var myTable = request.response;
+  buildTable(myTable);
 }
 
 // Ende

@@ -2,6 +2,8 @@
 
 let nav = document.querySelector('nav');
 let main = document.querySelector('main');
+let table = document.querySelector('table');
+let searchbar = document.getElementById('search-input');
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';
 let request = new XMLHttpRequest();
 var result;
@@ -11,18 +13,22 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
-let searchbar = document.getElementById('search-input');
-searchbar.addEventListener('keyup', function() {
-  let value = this.value;
-  //console.log(value);
-  search(value, data);
+request.onload = function() {
+  result = request.response;
+  data = result.article;
   buildTable(data);
+}
+
+searchbar.addEventListener('keyup', function() {
+  var value = this.value;
+  console.log(value);
+  search(value);
+  //buildTable(data);
 })
 
-function buildTable(result) {
-  var table = document.getElementById('table');
-  data = result.article;
+function buildTable(data) {
   table.innerHTML = '';
+  //console.log(result);
 
   for (i = 0; i < data.length; i++) {
     var row = `<tr>
@@ -34,28 +40,21 @@ function buildTable(result) {
   };
 }
 
-request.onload = function() {
-  result = request.response;
-  buildTable(result);
-}
-
-function search(value, data) {
+function search(value) {
   let filteredData = [];
-
-  console.log(data);
+  //console.log(data);
 
   for (i = 0; i < data.length; i++) {
-    value = value.toLowerCase();
-    let name = data[i].name.toLowerCase();
-
-    console.log(value);
+    //value = value.toLowerCase();
+    var name = data[i].name.toLowerCase();
 
     if (name.includes(value)){
       filteredData.push(data[i])
     }
 
   };
-  return filteredData;
+  console.log(filteredData);
+  buildTable(filteredData);
 }
 
 // Ende

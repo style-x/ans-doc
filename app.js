@@ -23,12 +23,10 @@ searchbar.addEventListener('keyup', function() {
   var value = this.value;
   console.log(value);
   search(value);
-  //buildTable(data);
 })
 
 function buildTable(data) {
   table.innerHTML = '';
-  //console.log(result);
 
   for (i = 0; i < data.length; i++) {
     var row = `<tr>
@@ -42,10 +40,8 @@ function buildTable(data) {
 
 function search(value) {
   let filteredData = [];
-  //console.log(data);
 
   for (i = 0; i < data.length; i++) {
-    //value = value.toLowerCase();
     var name = data[i].name.toLowerCase();
 
     if (name.includes(value)){

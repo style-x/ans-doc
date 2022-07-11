@@ -29,13 +29,14 @@ function buildTable(data) {
   table.innerHTML = '';
 
   for (i = 0; i < data.length; i++) {
-    var row = `<tr>
-                  <td>${data[i].name}</td>
-                  <td>${data[i].artnr}</td>
-                  <td>${data[i].clients}</td>
-              </tr>`
-    table.innerHTML += row;
-  };
+          var row = `<tr>
+                    <td>${data[i].name}</td>
+                    <td>${data[i].artnr}</td>
+                    <td>${data[i].clients}</td>
+                </tr>`
+      table.innerHTML += row;
+    };
+    
 }
 
 function search(value) {

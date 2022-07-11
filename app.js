@@ -3,12 +3,13 @@
 let nav = document.querySelector('nav');
 let main = document.querySelector('main');
 let table = document.querySelector('table');
-let item = document.querySelector('item');
+let item = document.querySelectorAll('item');
 let searchbar = document.getElementById('search-input');
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';
 let request = new XMLHttpRequest();
-var result;
-var data;
+let result;
+let data;
+let it;
 
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -36,8 +37,22 @@ function buildTable(data) {
                     <td>${data[i].clients}</td>
                 </tr>`
       table.innerHTML += row;
-    };
-
+  };
+  setTimeout(function() {
+    item = document.querySelectorAll('.item');
+    console.log(item.length);
+    
+    function itemBtn(item) {
+      for (i = 0; i < item.length; i++)
+      item[i].addEventListener('click', function() {
+        it = item[i];
+        console.log(it);
+        showInfo(it);
+      });
+    }
+    itemBtn(item);
+    
+  }, 500);
 }
 
 function search(value) {
@@ -55,12 +70,10 @@ function search(value) {
   buildTable(filteredData);
 }
 
-item.addEventListener('click', function() {
-  showInfo(item);
-})
 
-function showInfo(item) {
-  console.log(item);
+
+function showInfo(it) {
+ // console.log(it);
 }
 
 // Ende

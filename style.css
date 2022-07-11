@@ -78,6 +78,6 @@ table td {
 }
 
 table tr:hover {
-  background-color: #DDD;
+  background-color: red;
   cursor: pointer;
 }

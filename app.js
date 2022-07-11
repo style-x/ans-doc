@@ -3,6 +3,7 @@
 let nav = document.querySelector('nav');
 let main = document.querySelector('main');
 let table = document.querySelector('table');
+let item = document.querySelector('item');
 let searchbar = document.getElementById('search-input');
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';
 let request = new XMLHttpRequest();
@@ -29,14 +30,14 @@ function buildTable(data) {
   table.innerHTML = '';
 
   for (i = 0; i < data.length; i++) {
-          var row = `<tr>
+          var row = `<tr class="item">
                     <td>${data[i].name}</td>
                     <td>${data[i].artnr}</td>
                     <td>${data[i].clients}</td>
                 </tr>`
       table.innerHTML += row;
     };
-    
+
 }
 
 function search(value) {
@@ -52,6 +53,14 @@ function search(value) {
   };
   console.log(filteredData);
   buildTable(filteredData);
+}
+
+item.addEventListener('click', function() {
+  showInfo(item);
+})
+
+function showInfo(item) {
+  console.log(item);
 }
 
 // Ende

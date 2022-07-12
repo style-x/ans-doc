@@ -6,6 +6,10 @@
       {
         "name" : "SF433-5-R-ACS",
         "artnr" : 921234,
+        "pics": [
+          "bild1.jpg",
+          "bild2.jpg"
+        ],
         "clients" : [
           "Butzbach",
           "HEW",
@@ -15,6 +19,10 @@
       {
         "name" : "EF433-4E",
         "artnr" : 974321,
+        "pics": [
+          "bld1.jpg",
+          "bld2.jpg"
+        ],
         "clients" : [
           "Mimimi",
           "Dortma",
@@ -24,6 +32,10 @@
       {
         "name" : "SF433-5-AES-Dialog",
         "artnr" : 971435,
+        "pics": [
+          "971435-1.jpg",
+          "971435-2.jpg"
+        ],
         "clients" : [
           "Iversen",
           "HEW",
@@ -35,6 +47,10 @@
       {
         "name" : "EF433-1E",
         "artnr" : 974321,
+        "pics": [
+          "bildchen1.jpg",
+          "bildchen2.jpg"
+        ],
         "clients" : [
           "Mimimi",
           "Dortma",
@@ -44,6 +60,10 @@
       {
         "name" : "EF433-2E",
         "artnr" : 974322,
+        "pics": [
+          "pic1.jpg",
+          "pic2.jpg"
+        ],
         "clients" : [
           "Mimimi",
           "Dortma",

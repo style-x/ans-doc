@@ -18,20 +18,20 @@ request.responseType = 'json';
 request.send();
 request.onload = function() {
   result = request.response;
-  data = result.article;
-  buildTable(data);
+  db = result.article;
+  buildTable(db);
 }
 
 
 // Display Table
-function buildTable(data) {
+function buildTable(db) {
   table.innerHTML = '';
 
-  for (i = 0; i < data.length; i++) {
+  for (i = 0; i < db.length; i++) {
           var row = `<tr class="item">
-                    <td>${data[i].name}</td>
-                    <td>${data[i].artnr}</td>
-                    <td>${data[i].clients}</td>
+                    <td>${db[i].name}</td>
+                    <td>${db[i].artnr}</td>
+                    <td>${db[i].clients}</td>
                 </tr>`
       table.innerHTML += row;
   };
@@ -43,7 +43,7 @@ function buildTable(data) {
       for (i = 0; i < item.length; i++)
       item[i].addEventListener('click', function() {
         it = item[i];
-        showInfo(it);
+        console.log(it);
       });
     }
     itemBtn(item);
@@ -55,27 +55,27 @@ function buildTable(data) {
 // Searchbar Filter
 searchbar.addEventListener('keyup', function() {
   var value = this.value;
-  var filteredData = [];
+  var filteredDb = [];
 
-  for (i = 0; i < data.length; i++) {
-    var name = data[i].name.toLowerCase();
-    var artnr = data[i].artnr;
+  console.log(value);
+
+  for (i = 0; i < db.length; i++) {
+    var name = db[i].name.toLowerCase();
+    var artnr = db[i].artnr;
 
     if (name.includes(value)){
-      filteredData.push(data[i])
+      filteredDb.push(db[i])
     } else if (!/\D/.test(value)){
-      filteredData.push(data[i])
+      filteredDb.push(db[i])
     }
 
   };
 
-  buildTable(filteredData);
+  buildTable(filteredDb);
 })
 
 
 // Show Item Details
-function showInfo(it) {
-  console.log(it);
-}
+//function showInfo(it) { }
 
 // Ende

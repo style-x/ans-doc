@@ -55,7 +55,6 @@ function buildTable(data) {
 // Searchbar Filter
 searchbar.addEventListener('keyup', function() {
   var value = this.value;
-  console.log(value);
   search(value);
 })
 
@@ -64,13 +63,21 @@ function search(value) {
 
   for (i = 0; i < data.length; i++) {
     var name = data[i].name.toLowerCase();
+    var artnr = data[i].artnr;
+    var clients = data[i].clients;
 
     if (name.includes(value)){
       filteredData.push(data[i])
     }
+    if (artnr.includes(value)){
+      filteredData.push(data[i])
+    }
+    if (clients.includes(value)){
+      filteredData.push(data[i])
+    }
 
   };
-  console.log(filteredData);
+
   buildTable(filteredData);
 }
 

@@ -66,7 +66,7 @@ searchbar.addEventListener('keyup', function() {
       filteredData.push(data[i])
     } else if (artnr.includes(value)){
       filteredData.push(data[i])
-    } else (clients.includes(value)){
+    } else if (clients.includes(value)){
       filteredData.push(data[i])
     }
 

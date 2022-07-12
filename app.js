@@ -63,7 +63,7 @@ searchbar.addEventListener('keyup', function() {
 
     if (name.includes(value)){
       filteredData.push(data[i])
-    } else if (artnr.includes(value)){
+    } else if (!/\D/.test(value)){
       filteredData.push(data[i])
     }
 

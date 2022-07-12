@@ -54,11 +54,7 @@ function buildTable(data) {
 
 // Searchbar Filter
 searchbar.addEventListener('keyup', function() {
-  var value = this.value;
-  search(value);
-})
-
-function search(value) {
+  let value = this.value;
   let filteredData = [];
 
   for (i = 0; i < data.length; i++) {
@@ -68,18 +64,16 @@ function search(value) {
 
     if (name.includes(value)){
       filteredData.push(data[i])
-    }
-    if (artnr.includes(value)){
+    } else if (artnr.includes(value)){
       filteredData.push(data[i])
-    }
-    if (clients.includes(value)){
+    } else (clients.includes(value)){
       filteredData.push(data[i])
     }
 
   };
 
   buildTable(filteredData);
-}
+})
 
 
 // Show Item Details

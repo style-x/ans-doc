@@ -1,14 +1,11 @@
 // Anfang
 
 let nav = document.querySelector('nav');
-let main = document.querySelector('main');
-let table = document.querySelector('table');
+let table = document.getElementById('table');
 let item = document.querySelectorAll('item');
-let searchbar = document.getElementById('search-input');
+let input = document.getElementById('search-input');
 var result;
-var data;
-var it;
-
+var db;
 
 // Fetch db.json
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';
@@ -25,6 +22,7 @@ request.onload = function() {
 
 // Display Table
 function buildTable(db) {
+
   table.innerHTML = '';
 
   for (i = 0; i < db.length; i++) {
@@ -37,7 +35,7 @@ function buildTable(db) {
   };
   setTimeout(function() {
     item = document.querySelectorAll('.item');
-    console.log(item.length);
+    //console.log(item.length);
     
     function itemBtn(item) {
       for (i = 0; i < item.length; i++)
@@ -49,33 +47,34 @@ function buildTable(db) {
     itemBtn(item);
     
   }, 500);
+
 }
 
 
-// Searchbar Filter
-searchbar.addEventListener('keyup', function() {
-  var value = this.value;
-  var filteredDb = [];
+// Input Filter
+input.addEventListener('keyup', function() {
+  var filter, tr, td, i, txtValue;
+  filter = input.value.toUpperCase();
+  tr = table.getElementsByTagName("tr");
 
-  console.log(value);
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
 
-  for (i = 0; i < db.length; i++) {
-    var name = db[i].name.toLowerCase();
-    var artnr = db[i].artnr;
+    td = tr[i].getElementsByTagName("td");
+    for (j = 0; j < td.length; j++) {
 
-    if (name.includes(value)){
-      filteredDb.push(db[i])
-    } else if (!/\D/.test(value)){
-      filteredDb.push(db[i])
+      td = tr[i].getElementsByTagName("td")[j];
+
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none"; // falls erste Zeile nicht passt wird schon ausgeblendet bevor zweite Spalte getestet wird...
+      }
+
     }
-
-  };
-
-  buildTable(filteredDb);
+  }
 })
 
-
-// Show Item Details
-//function showInfo(it) { }
 
 // Ende

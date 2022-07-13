@@ -1,29 +1,22 @@
 /* || general styles */
 
 :root {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-size: 1.5rem;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-}
-
-h1, h2 {
-  font-family: 'Faster One', cursive;
 }
 
 /* header styles */
-
-h1 {
-  font-size: 4rem;
-  text-align: center;
-}
 
 nav {
   background-color: #CCC;
@@ -54,23 +47,8 @@ main {
   justify-content: center;
 }
 
-main article {
-  width: 33%;
-  float: left;
-}
-
-main p {
-  margin: 5px 0;
-}
-
-main ul {
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 2.5rem;
-  letter-spacing: -5px;
-  margin-bottom: 10px;
+table {
+  margin: 0 auto;
 }
 
 table td {

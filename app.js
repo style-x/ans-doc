@@ -65,15 +65,20 @@ input.addEventListener('keyup', function() {
 
       td = tr[i].getElementsByTagName("td")[j];
 
+      var test;
+
       txtValue = td.textContent || td.innerText;
       if (txtValue.indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none"; // falls erste Zeile nicht passt wird schon ausgeblendet bevor zweite Spalte getestet wird...
+        test.push([i]);
       }
 
     }
   }
+
+  console.log(test);
 })
 
 

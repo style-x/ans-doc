@@ -6,68 +6,68 @@
       {
         "name" : "SF433-5-R-ACS",
         "artnr" : 921234,
-        "pics": [
-          "bild1.jpg",
-          "bild2.jpg"
-        ],
         "clients" : [
           "Butzbach",
           "HEW",
           "RUKU"
+        ],
+        "pics": [
+          "bild1.jpg",
+          "bild2.jpg"
         ]
       },
       {
         "name" : "EF433-4E",
         "artnr" : 974321,
-        "pics": [
-          "bld1.jpg",
-          "bld2.jpg"
-        ],
         "clients" : [
           "Mimimi",
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "bld1.jpg",
+          "bld2.jpg"
         ]
       },
       {
         "name" : "SF433-5-AES-Dialog",
         "artnr" : 971435,
-        "pics": [
-          "971435-1.jpg",
-          "971435-2.jpg"
-        ],
         "clients" : [
           "Iversen",
           "HEW",
           "Inferno",
           "Telekomande",
           "Superdupa"
+        ],
+        "pics": [
+          "971435-1.jpg",
+          "971435-2.jpg"
         ]
       },
       {
         "name" : "EF433-1E",
         "artnr" : 974321,
-        "pics": [
-          "bildchen1.jpg",
-          "bildchen2.jpg"
-        ],
         "clients" : [
           "Mimimi",
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "bildchen1.jpg",
+          "bildchen2.jpg"
         ]
       },
       {
         "name" : "EF433-2E",
         "artnr" : 974322,
-        "pics": [
-          "pic1.jpg",
-          "pic2.jpg"
-        ],
         "clients" : [
           "Mimimi",
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "pic1.jpg",
+          "pic2.jpg"
         ]
       },
       {
@@ -77,6 +77,9 @@
           "Mimimi",
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "none"
         ]
       },
       {
@@ -86,6 +89,9 @@
           "Mimimi",
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "none"
         ]
       },
       {
@@ -95,6 +101,9 @@
           "Mimimi",
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "none"
         ]
       },
       {
@@ -102,6 +111,9 @@
         "artnr" : 974318,
         "clients" : [
           "allClients"
+        ],
+        "pics": [
+          "none"
         ]
       },
       {
@@ -110,6 +122,9 @@
         "clients" : [
           "Dortma",
           "Superdupa"
+        ],
+        "pics": [
+          "none"
         ]
       },
       {
@@ -117,6 +132,9 @@
         "artnr" : 974411,
         "clients" : [
           "Hallo"
+        ],
+        "pics": [
+          "none"
         ]
       },
       {
@@ -126,6 +144,9 @@
           "Butzbach",
           "Superdupa",
           "HEW"
+        ],
+        "pics": [
+          "none"
         ]
       }
     ]

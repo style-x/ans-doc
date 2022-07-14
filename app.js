@@ -4,13 +4,8 @@ let nav = document.querySelector('nav');
 let table = document.getElementById('table');
 let item = document.querySelectorAll('item');
 let input = document.getElementById('search-input');
-let searchFor = document.getElementById('searchFor');
-var result;
-var db;
-var test = 0;
+var result, db;
 
-console.log(searchFor);
-console.log(searchFor.value);
 
 // Fetch db.json
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';
@@ -34,7 +29,7 @@ function buildTable(db) {
           var row = `<tr class="item">
                     <td>${db[i].name}</td>
                     <td>${db[i].artnr}</td>
-                    <td>${db[i].clients}</td>
+                    <td>${db[i].clients.join(', ')}</td>
                 </tr>`
       table.innerHTML += row;
   };
@@ -58,9 +53,13 @@ function buildTable(db) {
 
 // Input Filter
 input.addEventListener('keyup', function() {
-  var filter, tr, td, i, txtValue;
+  var filter, tr, td, i, txtValue, searchFor;
+  searchFor = document.getElementById('searchFor').value;
   filter = input.value.toUpperCase();
+  fillter = input.value;
   tr = table.getElementsByTagName("tr");
+
+  console.log(searchFor);
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
@@ -75,10 +74,20 @@ input.addEventListener('keyup', function() {
         tr[i].style.display = "none";
       }
     } else if (searchFor == "artnr") {
-      td = tr[i].getElementsByTagName("td")[0];
+      td = tr[i].getElementsByTagName("td")[1];
 
       txtValue = td.textContent || td.innerText;
       if (txtValue.indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } else if (searchFor == "clients") {
+      td = tr[i].getElementsByTagName("td")[2];
+
+      txtValue = td.textContent || td.innerText;
+      //if (txtValue.includes(filter)) {
+        if (txtValue.search(new RegExp(fillter, "i")) == -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";

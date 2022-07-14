@@ -60,22 +60,25 @@ input.addEventListener('keyup', function() {
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
 
+    var test = "";
+
     td = tr[i].getElementsByTagName("td");
     for (j = 0; j < td.length; j++) {
 
       td = tr[i].getElementsByTagName("td")[j];
 
-      var test;
-
       txtValue = td.textContent || td.innerText;
       if (txtValue.indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
-        tr[i].style.display = "none"; // falls erste Zeile nicht passt wird schon ausgeblendet bevor zweite Spalte getestet wird...
-        test.push([i]);
+        test.push([j]);
       }
-
     }
+
+    if (test >= 3) {
+      tr[i].style.display = "none"; 
+    }
+
   }
 
   console.log(test);

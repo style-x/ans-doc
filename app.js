@@ -6,7 +6,7 @@ let item = document.querySelectorAll('item');
 let input = document.getElementById('search-input');
 var result;
 var db;
-var test;
+var test = 0;
 
 // Fetch db.json
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';

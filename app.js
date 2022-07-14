@@ -65,7 +65,7 @@ input.addEventListener('keyup', function() {
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
 
-    if (searchFor == text) {
+    if (searchFor == "name") {
       td = tr[i].getElementsByTagName("td")[0];
 
       txtValue = td.textContent || td.innerText;
@@ -74,7 +74,7 @@ input.addEventListener('keyup', function() {
       } else {
         tr[i].style.display = "none";
       }
-    } else if (searchFor == artnr) {
+    } else if (searchFor == "artnr") {
       td = tr[i].getElementsByTagName("td")[0];
 
       txtValue = td.textContent || td.innerText;

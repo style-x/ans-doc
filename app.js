@@ -9,6 +9,9 @@ var result;
 var db;
 var test = 0;
 
+console.log(searchFor);
+console.log(searchFor.value);
+
 // Fetch db.json
 let requestURL = 'https://style-x.github.io/ans-doc/db.json';
 let request = new XMLHttpRequest();

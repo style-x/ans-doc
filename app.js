@@ -78,10 +78,9 @@ input.addEventListener('keyup', function() {
     if (test >= 3) {
       tr[i].style.display = "none"; 
     }
-
+    
+    console.log(test);
   }
-
-  console.log(test);
 })
 
 

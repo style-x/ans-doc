@@ -4,6 +4,7 @@ let nav = document.querySelector('nav');
 let table = document.getElementById('table');
 let item = document.querySelectorAll('item');
 let input = document.getElementById('search-input');
+let searchFor = document.getElementById('searchFor');
 var result;
 var db;
 var test = 0;
@@ -61,25 +62,26 @@ input.addEventListener('keyup', function() {
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
 
-    td = tr[i].getElementsByTagName("td");
-    for (j = 0; j < td.length; j++) {
-
-      td = tr[i].getElementsByTagName("td")[j];
+    if (searchFor == text) {
+      td = tr[i].getElementsByTagName("td")[0];
 
       txtValue = td.textContent || td.innerText;
       if (txtValue.indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
-        //test.push([j]);
-        test++;
+        tr[i].style.display = "none";
+      }
+    } else if (searchFor == artnr) {
+      td = tr[i].getElementsByTagName("td")[0];
+
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
       }
     }
 
-    if (test >= 3) {
-      tr[i].style.display = "none"; 
-    }
-
-    console.log(test);
   }
 })
 

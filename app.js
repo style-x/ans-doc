@@ -2,9 +2,8 @@
 
 let nav = document.querySelector('nav');
 let table = document.getElementById('table');
-let item = document.querySelectorAll('item');
 let input = document.getElementById('search-input');
-var result, db;
+var result, db, item;
 
 
 // Fetch db.json
@@ -35,13 +34,18 @@ function buildTable(db) {
   };
   setTimeout(function() {
     item = document.querySelectorAll('.item');
-    //console.log(item.length);
     
     function itemBtn(item) {
+      console.log(item.length);
       for (i = 0; i < item.length; i++)
-      item[i].addEventListener('click', function() {
-        it = item[i];
-        console.log(it);
+      item[i].addEventListener('click', function(e) {
+
+        test = e.target.parentElement;// <<<<< HIER LIEGT 
+        console.log(test.nextChild);  // <<<<< DAS PROBLEM
+
+        // müsste die ArtNr aus dem zweiten Child kriegen und diese
+        // dann per Link *url*?link=921234
+
       });
     }
     itemBtn(item);
@@ -54,44 +58,21 @@ function buildTable(db) {
 // Input Filter
 input.addEventListener('keyup', function() {
   var filter, tr, td, i, txtValue, searchFor;
-  searchFor = document.getElementById('searchFor').value;
   filter = input.value.toUpperCase();
-  fillter = input.value;
   tr = table.getElementsByTagName("tr");
 
-  console.log(searchFor);
-
-  // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
 
-    if (searchFor == "name") {
-      td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[0];
+    td2 = tr[i].getElementsByTagName("td")[1];
+    //td += tr[i].getElementsByTagName("td")[2];
 
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    } else if (searchFor == "artnr") {
-      td = tr[i].getElementsByTagName("td")[1];
+    txtValue = td.innerText + td2.innerText;
 
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    } else if (searchFor == "clients") {
-      td = tr[i].getElementsByTagName("td")[2];
-
-      txtValue = td.textContent || td.innerText;
-      //if (txtValue.includes(filter)) {
-        if (txtValue.search(new RegExp(fillter, "i")) == -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+    if (txtValue.indexOf(filter) > -1) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display = "none";
     }
 
   }

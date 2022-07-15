@@ -56,6 +56,8 @@ main {
 
 table {
   margin: 0 auto;
+  border: 0;
+  gap: 0;
 }
 
 table td {
@@ -65,4 +67,8 @@ table td {
 table tr:hover {
   background-color: #dfdfdf;
   cursor: pointer;
+}
+
+.item {
+  outline: 0;
 }

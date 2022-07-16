@@ -1,9 +1,7 @@
-// Anfang
-
 let nav = document.querySelector('nav');
 let table = document.getElementById('table');
 let input = document.getElementById('search-input');
-var result, db, item;
+var db;
 
 
 // Fetch db.json
@@ -13,7 +11,7 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function() {
-  result = request.response;
+  let result = request.response;
   db = result.article;
   buildTable(db);
 }
@@ -21,11 +19,9 @@ request.onload = function() {
 
 // Display Table
 function buildTable(db) {
-
   table.innerHTML = '';
-
   for (i = 0; i < db.length; i++) {
-          var row = `<tr class="item">
+          var row = `<tr>
                     <td>${db[i].name}</td>
                     <td>${db[i].artnr}</td>
                     <td>${db[i].clients.join(', ')}</td>
@@ -33,25 +29,25 @@ function buildTable(db) {
       table.innerHTML += row;
   };
   setTimeout(function() {
-    item = document.querySelectorAll('.item');
-    
-    function itemBtn(item) {
-      console.log(item.length);
-      for (i = 0; i < item.length; i++)
-      item[i].addEventListener('click', function(e) {
-
-        test = e.target.parentElement;// <<<<< HIER LIEGT 
-        console.log(test.nextChild);  // <<<<< DAS PROBLEM
-
-        // müsste die ArtNr aus dem zweiten Child kriegen und diese
-        // dann per Link *url*?link=921234
-
-      });
-    }
-    itemBtn(item);
-    
+    addRowHandlers();
   }, 500);
+}
 
+
+// Row Click Handler
+function addRowHandlers() {
+  let rows = table.getElementsByTagName("tr");
+  for (i = 0; i < rows.length; i++) {
+    let currentRow = table.rows[i];
+    let createClickHandler = function(row) {
+      return function() {
+        let cell = row.getElementsByTagName("td")[1];
+        let id = cell.innerText;
+        console.log("id:" + id);
+      };
+    };
+    currentRow.onclick = createClickHandler(currentRow);
+  }
 }
 
 
@@ -62,7 +58,6 @@ input.addEventListener('keyup', function() {
   tr = table.getElementsByTagName("tr");
 
   for (i = 0; i < tr.length; i++) {
-
     td = tr[i].getElementsByTagName("td")[0];
     td2 = tr[i].getElementsByTagName("td")[1];
     //td += tr[i].getElementsByTagName("td")[2];
@@ -76,7 +71,7 @@ input.addEventListener('keyup', function() {
     }
 
   }
+  setTimeout(function() {
+    addRowHandlers();
+  }, 500);
 })
-
-
-// Ende

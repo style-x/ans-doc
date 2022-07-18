@@ -1,7 +1,11 @@
 let nav = document.querySelector('nav');
 let table = document.getElementById('table');
 let input = document.getElementById('search-input');
+let homeBtn = document.getElementById('homeBtn');
 var db, searchFor;
+
+
+homeBtn.addEventListener('click', buildTable); // hier muss reload her
 
 
 // Fetch db.json
@@ -21,7 +25,7 @@ request.onload = function() {
 function buildTable(db) {
   table.innerHTML = '';
   for (i = 0; i < db.length; i++) {
-          var row = `<tr>
+          var row = `<tr class="items">
                     <td>${db[i].name}</td>
                     <td>${db[i].artnr}</td>
                     <td>${db[i].clients.join(', ')}</td>

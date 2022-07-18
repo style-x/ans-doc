@@ -23,35 +23,32 @@ nav {
 }
 
 #search-input {
-  padding: 5px;
+  padding: 0.3rem;
   border: 1px solid #333;
   border-radius: 8px;
   width: 30rem;
   outline: none;
-}
-
-#searchFor {
-  padding: 0.3rem;
-  margin-right: 1rem;
-  border: 1px solid #333;
-  border-radius: 8px;
-  outline: none;
+  padding: 0.2rem 0.3rem;
 }
 
 #searchFor:hover {
  cursor: pointer;
 }
 
-/* section styles */
-
-main {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#homeBtn {
+  margin-right: 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  padding: 0.2rem 0.3rem;
+  background-color: #333;
+  color: white;
 }
 
+/* section styles */
+
 table {
+  width: 100%;
   margin: 0 auto;
   border: 0;
   border-spacing: 0;
@@ -61,7 +58,7 @@ table td {
   padding: 1rem;
 }
 
-table tr:hover {
+.items:hover {
   background-color: #e0e0e0;
   cursor: pointer;
 }

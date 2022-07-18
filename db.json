@@ -31,6 +31,10 @@
         "pics": [
           "bld1.jpg",
           "bld2.jpg"
+        ],
+        "text": [
+          "Hier ist der erste Text eines EF...",
+          "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
       {
@@ -46,6 +50,9 @@
         "pics": [
           "971435-1.jpg",
           "971435-2.jpg"
+        ],
+        "text": [
+          "Kein Text"
         ]
       },
       {
@@ -59,6 +66,9 @@
         "pics": [
           "bildchen1.jpg",
           "bildchen2.jpg"
+        ],
+        "text": [
+          "Nix"
         ]
       },
       {
@@ -72,6 +82,10 @@
         "pics": [
           "pic1.jpg",
           "pic2.jpg"
+        ],
+        "text": [
+          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
       {
@@ -84,6 +98,10 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
       {
@@ -96,6 +114,10 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Kein Text.. vorrübergehen.",
+          "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
       {
@@ -108,6 +130,10 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
       {
@@ -118,6 +144,9 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Anleitung zum Bau des 8E"
         ]
       },
       {
@@ -129,6 +158,9 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Kein Text aber kommt bald"
         ]
       },
       {
@@ -139,6 +171,9 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Kein Text"
         ]
       },
       {
@@ -151,6 +186,9 @@
         ],
         "pics": [
           "none"
+        ],
+        "text": [
+          "Kein Text"
         ]
       }
     ]

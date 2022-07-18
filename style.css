@@ -1,14 +1,11 @@
 /* || general styles */
 
-:root {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 body {
@@ -57,7 +54,7 @@ main {
 table {
   margin: 0 auto;
   border: 0;
-  gap: 0;
+  border-spacing: 0;
 }
 
 table td {
@@ -65,7 +62,7 @@ table td {
 }
 
 table tr:hover {
-  background-color: #dfdfdf;
+  background-color: #e0e0e0;
   cursor: pointer;
 }
 

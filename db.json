@@ -14,6 +14,10 @@
         "pics": [
           "bild1.jpg",
           "bild2.jpg"
+        ],
+        "text": [
+          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
       {

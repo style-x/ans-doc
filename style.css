@@ -5,15 +5,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
 }
-
-/* header styles */
 
 nav {
   background-color: #CCC;
@@ -45,17 +43,14 @@ nav {
   color: white;
 }
 
-/* section styles */
-
 table {
-  width: 100%;
   margin: 0 auto;
   border: 0;
   border-spacing: 0;
 }
 
 table td {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .items:hover {
@@ -65,4 +60,17 @@ table td {
 
 .item {
   outline: 0;
+}
+
+
+@media screen and (min-width: 900px){
+  * {
+    font-size: 1.1rem;
+  }
+  table {
+    padding: 1rem;
+  }
+  table td {
+    padding: 0.8rem calc(5vw);
+  }
 }

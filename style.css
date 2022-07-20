@@ -29,10 +29,6 @@ nav {
   padding: 0.2rem 0.3rem;
 }
 
-#searchFor:hover {
- cursor: pointer;
-}
-
 #homeBtn {
   margin-right: 1rem;
   border: 1px solid #333;

@@ -111,7 +111,7 @@ function showInfo(searchFor) {
   table.innerHTML += row;
 
   if (found[0].pics) {
-    console.log(pics);
+    console.log(found[0].pics);
   } else {
     console.log("Keine Bilder da..");
   }

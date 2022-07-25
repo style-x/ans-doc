@@ -25,13 +25,14 @@ request.onload = function() {
 function buildTable(db) {
   table.innerHTML = '';
   for (i = 0; i < db.length; i++) {
-          var row = `<tr class="items">
-                    <td>${db[i].name}</td>
-                    <td>${db[i].artnr}</td>
-                    <td>${db[i].clients.join(', ')}</td>
-                </tr>`
-      table.innerHTML += row;
+    var row = `<tr class="items">
+                <td>${db[i].name}</td>
+                <td>${db[i].artnr}</td>
+                <td>${db[i].clients.join(', ')}</td>
+              </tr>`
+    table.innerHTML += row;
   };
+
   setTimeout(function() {
     addRowHandlers();
   }, 500);
@@ -108,5 +109,11 @@ function showInfo(searchFor) {
             </tr>`
 
   table.innerHTML += row;
+
+  if (found[0].pics) {
+    console.log(pics);
+  } else {
+    console.log("Keine Bilder da..");
+  }
 
 };

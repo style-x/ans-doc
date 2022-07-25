@@ -84,7 +84,7 @@
           "pic2.jpg"
         ],
         "text": [
-          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Hier ist der erste Text des Artikels SF433-5-R-Acs und ist nur ein Beispielt.",
           "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
@@ -92,15 +92,13 @@
         "name" : "EF433-3E",
         "artnr" : 974323,
         "clients" : [
-          "Mimimi",
-          "Dortma",
-          "Superdupa"
+          
         ],
         "pics": [
           "none"
         ],
         "text": [
-          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Hier ist der erste Text des Artikels SF433-5-R-Acs und ist nur ein Beispielt.",
           "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },
@@ -108,9 +106,7 @@
         "name" : "EF433-4E",
         "artnr" : 974324,
         "clients" : [
-          "Mimimi",
-          "Dortma",
-          "Superdupa"
+          
         ],
         "pics": [
           "none"
@@ -124,15 +120,13 @@
         "name" : "EF433-5E",
         "artnr" : 974325,
         "clients" : [
-          "Mimimi",
-          "Dortma",
-          "Superdupa"
+          "Test"
         ],
         "pics": [
           "none"
         ],
         "text": [
-          "Hier ist der erste Text des Artiekels SF433-5-R-Acs und ist nur ein Beispielt.",
+          "Hier ist der erste Text des Artikels SF433-5-R-Acs und ist nur ein Beispielt.",
           "Auch ein Beispieltext, aber etwas kürzer."
         ]
       },

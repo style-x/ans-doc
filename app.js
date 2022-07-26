@@ -111,10 +111,9 @@ function showInfo(searchFor) {
   table.innerHTML += row;
 
   var pics = found[0].pics;
-  console.log(pics);
 
   if (pics) {
-    for (i = 0; pics.length; i++) {
+    for (i = 0; i < pics.length; i++) {
       console.log(pics[i]);
     };
     } else {

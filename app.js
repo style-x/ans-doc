@@ -111,13 +111,14 @@ function showInfo(searchFor) {
   table.innerHTML += row;
 
   var pics = found[0].pics;
+  console.log(pics);
 
   if (pics) {
     for (i = 0; pics.length; i++) {
-    console.log(pics[i]);
+      console.log(pics[i]);
     };
-  } else {
-    console.log("Keine Bilder da..");
+    } else {
+      console.log("Keine Bilder da..");
   }
 
 };

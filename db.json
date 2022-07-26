@@ -109,7 +109,10 @@
           
         ],
         "pics": [
-          "none"
+          "bild-01.jpg",
+          "bild-02.jpg",
+          "bild-03.jpg",
+          "bild-04.jpg"
         ],
         "text": [
           "Kein Text.. vorrübergehen.",
@@ -137,7 +140,7 @@
           "allClients"
         ],
         "pics": [
-          "none"
+          "einetwaslaengererbildernamen.jpeg"
         ],
         "text": [
           "Anleitung zum Bau des 8E"
@@ -164,7 +167,7 @@
           "Hallo"
         ],
         "pics": [
-          "none"
+          "einlangerbildnamen.jpeg"
         ],
         "text": [
           "Kein Text"

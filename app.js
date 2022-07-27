@@ -5,7 +5,11 @@ let homeBtn = document.getElementById('homeBtn');
 var db, searchFor;
 
 
-homeBtn.addEventListener('click', buildTable); // hier muss reload her
+homeBtn.addEventListener('click', reload); // hier muss reload her
+
+function reload() {
+  location.reload(); 
+}
 
 
 // Fetch db.json
